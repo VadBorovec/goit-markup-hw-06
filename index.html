@@ -389,7 +389,7 @@
       </div>
       <div class="join-container">
         <p class="join-text">
-          приєднуйтесь
+          Приєднуйтесь
         </p>
         <ul class="list social-list">
           <li class="social-item">
@@ -424,6 +424,21 @@
             </a>
           </li>
         </ul>
+      </div>
+      <!-- Підписка -->
+      <div class="subscription-container">
+        <p class="subscription-text">Підпишіться на розсилку</p>
+        <form class="subscription-form" action="#" method="post">
+          <label for="user-email"></label>
+          <input class="subscription-input" type="email" name="input-email" id="input-email"
+            aria-describedby="input-email" placeholder="E-mail" required />
+          <button class="button primary" type="submit" aria-label="Підписатися">
+            Підписатися
+            <svg class="subscription-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
   </footer>
