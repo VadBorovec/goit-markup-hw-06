@@ -428,11 +428,11 @@
       <!-- Підписка -->
       <div class="subscription-container">
         <p class="subscription-text">Підпишіться на розсилку</p>
-        <form class="subscription-form" action="#" method="post">
+        <form name="subscription-form" class="subscription-form" action="#" method="post">
           <label for="user-email"></label>
-          <input class="subscription-input" type="email" name="input-email" id="input-email"
+          <input type="email" class="subscription-input" name="input-email" id="input-email"
             aria-describedby="input-email" placeholder="E-mail" required />
-          <button class="button primary" type="submit" aria-label="Підписатися">
+          <button type="submit" class="button primary" aria-label="Підписатися">
             Підписатися
             <svg class="subscription-icon" width="24" height="24">
               <use href="./images/sprite.svg#icon-send"></use>
@@ -451,6 +451,23 @@
           <use href="./images/sprite.svg#icon-close"></use>
         </svg>
       </button>
+      <div class="modal-form-container">
+        <p class="contact-text">Залиште свої дані, ми вам передзвонимо</p>
+        <form name="contact-form" class="contact-form" action="#" method="post">
+          <label for="person-name" class="contact-form-label">Ім'я</label>
+          <input type="text" class="contact-input" name="person-name" id="person-name" required />
+          <label for="person-tel" class="contact-form-label">Телефон</label>
+          <input type="number" class="contact-input" name="person-tel" id="person-tel" required />
+          <label for="person-email" class="contact-form-label">Пошта</label>
+          <input type="email" class="contact-input" name="person-email" id="person-email"
+            aria-describedby="person-email" required />
+          <label for="person-comment" class="contact-form-label">Коментар</label>
+          <textarea class="contact-form-comment" name="person-comment" id="person-comment" cols="30" rows="10"
+            placeholder="Введіть текст"></textarea>
+          <button type="submit" class="button primary" aria-label="Відправити">Відправити</button>
+        </form>
+      </div>
+
     </div>
   </div>
 

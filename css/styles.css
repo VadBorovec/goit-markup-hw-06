@@ -636,7 +636,6 @@ img {
 .subscription-input::placeholder {
     font-size: 16px;
     line-height: 1.25;
-
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -709,4 +708,20 @@ img {
 
 .close-button:hover {
     fill: var(--accent-color);
+}
+
+/*  *Форма модального вікна*  */
+
+.modal-form-container {
+    padding: 40px;
+}
+
+.contact-form-label {
+    display: block;
+}
+
+.contact-form-comment {
+    height: 120px;
+    width: 100%;
+    resize: none;
 }
