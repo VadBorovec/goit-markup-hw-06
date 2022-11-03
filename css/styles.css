@@ -22,7 +22,7 @@
     /* Плейсхолдер */
     --input-placeholder-color: rgba(117, 117, 117, 0.5);
     /* перехід ховера та фокуса */
-    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Тіло */
@@ -91,8 +91,8 @@ img {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    transition: color 250ms var(--timing-function),
-                background-color 250ms var(--timing-function);
+    transition: color var(--timing-function),
+                background-color var(--timing-function);
 }
 
 .link:hover,
@@ -127,9 +127,9 @@ img {
     border: 0;
     margin: 0 auto;
     padding: 10px 32px;
-    transition: color 250ms var(--timing-function),
-            background-color 250ms var(--timing-function),
-            box-shadow 250ms var(--timing-function);
+    transition: color var(--timing-function),
+            background-color var(--timing-function),
+            box-shadow var(--timing-function);
 }
 
 /* Кнопка з Героя */
@@ -139,6 +139,10 @@ img {
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     letter-spacing: 0.06em;
+}
+
+.contact-form .button {
+    width: 200px;
 }
 
 .button.primary:hover,
@@ -279,7 +283,7 @@ img {
     letter-spacing: 0.06em;
     text-align: center;
     max-width: 696px;
-    margin: 0 auto 40px;
+    margin: 0 auto 30px;
 }
 
 /* Секції */
@@ -438,8 +442,8 @@ img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    transition: color 250ms var(--timing-function),
-                background-color 250ms var(--timing-function);
+    transition: color var(--timing-function),
+                background-color var(--timing-function);
 }
 
 .social-link:hover,
@@ -480,8 +484,8 @@ img {
     border: 1px solid var(--icon-current-color);
     border-radius: 4px;
     color: var(--icon-current-color);
-    transition: color 250ms var(--timing-function),
-                border-color 250ms var(--timing-function);
+    transition: color var(--timing-function),
+                border-color var(--timing-function);
 }
 
 .clients-link:hover,
@@ -544,7 +548,7 @@ img {
     background-color: var(--accent-color);
     opacity: 0.9;
     transform: translateY(100%);
-    transition: transform 250ms var(--timing-function);
+    transition: transform var(--timing-function);
 }
 
 .card-overlay-caption {
@@ -655,7 +659,7 @@ img {
 /* Модальне вікно */
 
 .backdrop.is-hidden {
-    visibility: hidden;
+    visibility: visible;
     opacity: 0;
     pointer-events: none;
 }
@@ -670,7 +674,7 @@ img {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+    transition: opacity var(--timing-function), visibility var(--timing-function);
 }
 
 .backdrop.is-hidden .modal {
@@ -683,13 +687,13 @@ img {
     left: 50%;
     width: 528px;
     /* max-height: 581px; */
-    height: 100%;
+    /* height: 100%; */
     border-radius: 4px;
     background-color: var(--primary-bcg-color);
     overflow: auto;
     padding: 40px;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms var(--timing-function);
+    transition: transform var(--timing-function);
 }
 
 /* Кнопка закриття модального вікна */
@@ -707,7 +711,7 @@ img {
     /* fill: var(--black-text-color); */
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    transition: fill 250ms var(--timing-function);
+    transition: fill var(--timing-function);
     cursor: pointer;
     padding: 0;
     margin: 0;
@@ -765,7 +769,7 @@ margin-bottom: 10px;
     left: 12px;
     transform: translateY(-50%);
     fill: var(--title-text-color);
-    transition: fill 250ms var(--timing-function);
+    transition: fill var(--timing-function);
 }
 
 .form-input:hover + .form-icon,
@@ -789,7 +793,7 @@ margin-bottom: 10px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--input-placeholder-color); */
-    transition: border 250ms var(--timing-function);
+    transition: border var(--timing-function);
 }
 
 /* Placeholder */
@@ -804,14 +808,46 @@ margin-bottom: 10px;
     color: var(--input-placeholder-color);
 }
 
+/* Чекбокс */
+
+.modal-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 30px;
+}
+
 .checkbox-input {
+    position: absolute;
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.icon-check {
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+    transition: border var(--timing-function),
+    background-color var(--timing-function);
+}
+
+.checkbox-input:checked + .icon-check {
+    background-color: var(--accent-color);
+    border: none;
 }
 
 .checkbox-label {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    line-height: 1.71;
+    color: var(--primary-text-color);
+}
+
+.checkbox-link {
+    color: var(--accent-color);
 }
 
 /* .checkbox-label::before {
@@ -836,21 +872,3 @@ margin-bottom: 10px;
     border-radius: 2px;
     background-image: url(..);
 } */
-
-.checkbox-input:checked + .checkbox-label {
-    color: #188CE8;
-}
-
-.checkbox-label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-    margin-bottom: 30px;
-    line-height: 1.71;
-    color: var(--primary-text-color);
-}
-
-.checkbox-link {
-    color: var(--accent-color);
-}
