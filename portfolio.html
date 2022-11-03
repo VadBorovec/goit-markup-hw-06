@@ -271,7 +271,7 @@
             </div>
             <div class="join-container">
                 <p class="join-text">
-                    приєднуйтесь
+                    Приєднуйтесь
                 </p>
                 <ul class="list social-list">
                     <li class="social-item">
@@ -306,6 +306,21 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <!-- Підписка -->
+            <div class="subscription-container">
+                <p class="subscription-text">Підпишіться на розсилку</p>
+                <form name="subscription-form" class="subscription-form" action="#" method="post">
+                    <label for="user-email"></label>
+                    <input type="email" class="subscription-input" name="input-email" id="input-email"
+                        placeholder="E-mail" required />
+                    <button type="submit" class="button primary">
+                        Підписатися
+                        <svg class="subscription-icon" width="24" height="24">
+                            <use href="./images/sprite.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </div>
     </footer>

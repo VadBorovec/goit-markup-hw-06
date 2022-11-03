@@ -432,7 +432,7 @@
           <label for="user-email"></label>
           <input type="email" class="subscription-input" name="input-email" id="input-email" placeholder="E-mail"
             required />
-          <button type="submit" class="button primary" aria-label="Підписатися">
+          <button type="submit" class="button primary">
             Підписатися
             <svg class="subscription-icon" width="24" height="24">
               <use href="./images/sprite.svg#icon-send"></use>
@@ -481,19 +481,18 @@
         <textarea class="form-comment" name="person-comment" id="person-comment" rows="10" placeholder="Введіть текст"
           autocomplete="off"></textarea>
         <div class="modal-checkbox">
-          <input class="checkbox-input visually-hidden" id="terms-checkbox" type="checkbox" name="terms-checkbox"
-            value="accept" required />
-          <svg class="icon-check" width="16" height="15">
-            <use href="./images/sprite.svg#icon-check"></use>
-          </svg>
-          <label for="terms-checkbox" class="checkbox-label">Погоджуюся з розсилкою та приймаю
+          <label for="terms-checkbox" class="checkbox-label">
+            <input class="checkbox-input visually-hidden" id="terms-checkbox" type="checkbox" name="terms-checkbox"
+              value="accept" required />
+            <svg class="icon-check" width="16" height="15">
+              <use href="./images/sprite.svg#icon-check"></use>
+            </svg>
+            Погоджуюся з розсилкою та приймаю
             <a class="checkbox-link" href=" #">Умови договору</a>
           </label>
         </div>
-        <button type="submit" class="button primary" aria-label="Відправити">Відправити</button>
+        <button type="submit" class="button primary">Відправити</button>
       </form>
-
-
     </div>
   </div>
 

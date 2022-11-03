@@ -659,7 +659,7 @@ img {
 /* Модальне вікно */
 
 .backdrop.is-hidden {
-    visibility: visible;
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
@@ -821,8 +821,6 @@ margin-bottom: 10px;
 .checkbox-input {
     position: absolute;
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
 }
 
 .icon-check {
@@ -830,6 +828,7 @@ margin-bottom: 10px;
     border-radius: 2px;
     transition: border var(--timing-function),
     background-color var(--timing-function);
+    fill: var(--white-text-color);
 }
 
 .checkbox-input:checked + .icon-check {
