@@ -682,7 +682,7 @@ img {
     top: 50%;
     left: 50%;
     width: 528px;
-    max-height: 581px;
+    /* max-height: 581px; */
     height: 100%;
     border-radius: 4px;
     background-color: var(--primary-bcg-color);
@@ -691,6 +691,8 @@ img {
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--timing-function);
 }
+
+/* Кнопка закриття модального вікна */
 
 .close-button {
     position: absolute;
@@ -717,9 +719,10 @@ img {
 
 /*  *Форма модального вікна*  */
 
-/* .modal-form-container {
-
-} */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
 
 .form-title {
 font-size: 20px;
@@ -811,7 +814,7 @@ margin-bottom: 10px;
     margin-bottom: 30px;
 }
 
-.checkbox-label::before {
+/* .checkbox-label::before {
     content: '';
     position: absolute;
     top: 0;
@@ -832,8 +835,22 @@ margin-bottom: 10px;
     border: 1px solid var(--dark-bcg-color);
     border-radius: 2px;
     background-image: url(..);
-}
+} */
 
 .checkbox-input:checked + .checkbox-label {
     color: #188CE8;
+}
+
+.checkbox-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 30px;
+    line-height: 1.71;
+    color: var(--primary-text-color);
+}
+
+.checkbox-link {
+    color: var(--accent-color);
 }
