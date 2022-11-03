@@ -91,8 +91,7 @@ img {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    transition: color var(--timing-function),
-                background-color var(--timing-function);
+    transition: color var(--timing-function), background-color var(--timing-function);
 }
 
 .link:hover,
@@ -594,7 +593,8 @@ img {
 .address .link {
     font-style: normal;
     font-weight: 400;
-    letter-spacing: inherit;
+    letter-spacing: 0.03em;
+    line-height: 1.71;
 }
 
 .footer-container .logo {
@@ -640,6 +640,7 @@ img {
 }
 
 .subscription-input::placeholder {
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
@@ -686,8 +687,6 @@ img {
     top: 50%;
     left: 50%;
     width: 528px;
-    /* max-height: 581px; */
-    /* height: 100%; */
     border-radius: 4px;
     background-color: var(--primary-bcg-color);
     overflow: auto;
@@ -708,7 +707,6 @@ img {
     width: 30px;
     height: 30px;
     background-color: var(--primary-bcg-color);
-    /* fill: var(--black-text-color); */
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     transition: fill var(--timing-function);
@@ -789,10 +787,6 @@ margin-bottom: 10px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: none;
-    /* font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-    color: var(--input-placeholder-color); */
     transition: border var(--timing-function);
 }
 
