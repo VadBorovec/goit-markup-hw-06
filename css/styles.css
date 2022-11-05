@@ -586,6 +586,7 @@ img {
 
 .footer-container {
     display: flex;
+    justify-content: space-between;
     align-items: baseline;
     gap: 70px;
 }
@@ -815,6 +816,8 @@ margin-bottom: 10px;
 .checkbox-input {
     position: absolute;
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .icon-check {
